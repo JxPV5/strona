@@ -27,6 +27,7 @@ header {
 }
 
 .logo {
+    grid-column: 1;
     position: static;
     justify-self: start;
     transition: 0.1s ease-in-out;
@@ -37,6 +38,7 @@ header {
 
 nav {
     display: flex;
+    grid-column: 2;
     justify-content: center;
     align-items: center;
 }
@@ -67,10 +69,9 @@ nav li a:hover {
 
 .lang-switcher {
     position: static;
+    grid-column: 3;
     justify-self: end;
-    top: unset;
     text-align: right;
-    right: unset;
 }
 
 .lang-switcher a {
@@ -111,6 +112,8 @@ main section {
     align-items: start;
     padding-bottom: .75rem;
     padding-inline: 2.5rem;
+    max-width: 800px;
+    margin-inline: auto
 }
 
 
@@ -120,12 +123,6 @@ main section {
     padding-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
-}
-
-.post img {
-    display: flex;
-    
-  
 }
 
 .post p {
@@ -185,7 +182,6 @@ p {
 
 footer {
     display: flex;
-    justify-content: center;
     background: linear-gradient(135deg, #92c5ff 0%, #76a5ff 100%);
     border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding-top: 1.25rem;
@@ -217,8 +213,8 @@ h3 {
 }
 
 .hamburger {
-    flex: 0;
     display: none;
+    grid-column: 2;
     font-size: 1.5rem;
     color: #00418c;
     cursor: pointer;
@@ -236,6 +232,7 @@ h3 {
 
     nav {
         display: none;
+        grid-column: 2;
         position: absolute;
         top: 100%;
         left: 0;
@@ -266,12 +263,21 @@ h3 {
     .nav-toggle:checked + .hamburger + nav {
         display: flex;
     }
-    .logo {
-        position: static;
-        bottom: unset;
-        left: unset;
-        pointer-events: auto;
+    h1 {
+    font-size: 1.333rem;
     }
+    h2 
+    {
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+    main section {
+        padding-inline: .5rem;
+    }
+    time {
+        font-size: 1rem;
+    }
+    
     
     
 }
@@ -363,22 +369,6 @@ h3 {
     color: #0077ff;
 }
 
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 1.333rem;
-    }
-    h2 
-    {
-        font-size: 1.2rem;
-        font-weight: normal;
-    }
-    main section {
-        padding-inline: .5rem;
-    }
-    time {
-        font-size: 1rem;
-    }
-}
 @media only screen and (max-width: 450px) {
     h1 {
         font-size: 1rem;
