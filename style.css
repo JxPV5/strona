@@ -131,10 +131,21 @@ main section {
 
 
 img {
+    display: flex;
+    align-self: center;
     max-width: 100%;
     height: auto;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    main section {
+        padding-inline: 1rem;
+    }
+
+
+
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -219,6 +230,7 @@ h3 {
     color: #00418c;
     cursor: pointer;
     user-select: none;
+    transition: color 0.1s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {
@@ -265,6 +277,9 @@ h3 {
     .nav-toggle:checked + .hamburger + nav {
         display: flex;
     }
+    .nav-toggle:checked + .hamburger {
+        color: #0077ff;
+}
     h1 {
     font-size: 1.333rem;
     }
@@ -274,7 +289,7 @@ h3 {
         font-weight: normal;
     }
     main section {
-        padding-inline: .5rem;
+        padding-inline: .125rem;
     }
     time {
         font-size: 1rem;
@@ -324,6 +339,8 @@ h3 {
 }
 
 
+
+
 @media only screen and (max-width: 750px) {
     .my {
         flex-direction: column-reverse;
@@ -332,20 +349,12 @@ h3 {
         flex-wrap: wrap;
     }
     .socials {
-        padding-left: .75rem;
+        padding-left: 1rem;
     }
     
 }
 
-@media only screen and (max-width: 1000px) {
 
-    main section {
-        padding-inline: 1rem;
-    }
-
-
-
-}
 .otherinfo {
     max-width: 100%;
     display: flex;
