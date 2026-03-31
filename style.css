@@ -232,11 +232,13 @@ h3 {
 
     nav {
         display: none;
-        grid-column: 2;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        grid-column: 1 / -1;
         background: linear-gradient(135deg, #92c5ff 0%, #76a5ff 100%);
         border-bottom: rgba(0,0,0,0.5) 1px solid;
         z-index: 999;
