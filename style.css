@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -104,7 +108,6 @@ main {
 
 main section {
     padding-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -181,6 +184,8 @@ footer {
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 2rem;
 }
@@ -488,3 +493,4 @@ footer h3 {
         width: 90vw;
     }
 }
+
