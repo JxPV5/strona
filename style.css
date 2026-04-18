@@ -288,15 +288,12 @@ h3:hover {
     gap: 1.5rem;
 }
 
-.sponzdjec {
-    display: flex;
-    flex-direction: row;
+.sponzdjec, .drugiezdj {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-}
-.drugiezdj {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
+    justify-items: center; /* Centers the 75px images in their grid cells */
+    align-items: center;
 }
 
 .formalne p {
@@ -480,13 +477,12 @@ footer h3 {
         font-size: 0.8rem;
     }
     .zdjecia {
-        flex-direction: row;
+        flex-direction: column; /* Keeps the two groups stacked on top of each other */
+        gap: 2rem; /* Adds a bit more space between the shields and the bottom logos */
     }
-    .sponzdjec {
-        flex-direction: column;
-    }
-    .drugiezdj {
-        flex-direction: column;
+    .sponzdjec, .drugiezdj {
+        grid-template-columns: repeat(2, 1fr); /* Creates the perfect 2x2 grid */
+        gap: 1.5rem; 
     }
     section {
         width: 90vw;
