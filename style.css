@@ -424,13 +424,19 @@ footer h3 {
         flex-wrap: wrap;
         .formalne,
         .sponsorzy,
+    }
         .socials {
             flex: none; /* Stops them from stretching to fill the vertical space */
             min-height: auto; /* Safely removes the 10rem minimum height */
             width: 100%; /* Ensures they stay properly centered */
-            padding: 1rem 0; /* Gives a normal, controlled amount of breathing room */
-    }
-    }
+            padding: 1rem ; /* Gives a normal, controlled amount of breathing room */
+         }
+         .formalne {
+            flex: none;
+            min-height: auto;
+            justify-content: flex-start;
+            width: 100%;
+        }   
     /* ... rest of your media query styles ... */
 }
 @media only screen and (max-width: 800px) {
@@ -508,6 +514,7 @@ footer h3 {
     section p {
         font-size: 1rem;
     }
+    
 }
 
 
