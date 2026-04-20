@@ -8,6 +8,14 @@
 html {
     overflow-y: scroll;
 }
+h2 a {
+    text-decoration: none;
+    color: #003375;
+    transition: color 0.1s ease-in-out;
+}
+h2 a:hover {
+    color: #0077ff;
+}
 
 body {
     display: flex;
@@ -203,6 +211,7 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding-top: 1.25rem;
     padding-bottom: .25rem;
+    margin-top: 1.25rem;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
@@ -392,6 +401,31 @@ footer h3 {
     color: #0077ff;
 }
 
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: auto;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    /* 1. On small screens, take up 90% of the width (leaves a nice little gap on the edges) */
+    
+    /* 2. On big screens, hit the "safety brake" at 800px and stop growing */
+    max-width: 800px;
+    width: 90%; 
+    
+    /* 3. Keep the aspect ratio perfect so it doesn't squish */
+    height: auto; 
+    
+    /* 4. Keep it perfectly centered in the container */
+
+}
 
 /*@media only screen and (max-width: 1300px) {
     .my {
@@ -422,9 +456,7 @@ footer h3 {
         align-items: center;
         gap: 0rem;
         flex-wrap: wrap;
-        .formalne,
-        .sponsorzy,
-    }
+        }
         .socials {
             flex: none; /* Stops them from stretching to fill the vertical space */
             min-height: auto; /* Safely removes the 10rem minimum height */
