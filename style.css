@@ -23,13 +23,13 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    background: radial-gradient(circle, #ffffff 80%, #7ab6ff82 100%);
+    background-color: hsl(0, 0%, 90%);
 }
 header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    background: linear-gradient(120deg, hsl(215, 80%, 75%), hsl(215, 80%, 50%) 100%);
+   background: linear-gradient(90deg, #086CB9, #10325F 325%);
     padding: 0.6rem 1rem;
     position: sticky;
     top: 0;
@@ -42,10 +42,15 @@ header {
     position: static;
     justify-self: start;
     transition: 0.1s ease-in-out;
+    filter: brightness(1.5);
+}
+.logolink {
+    width: fit-content;
+    display: block;
 }
 
 .logo:hover {
-    filter: brightness(1.25);
+    filter: brightness(2);
 }
 
 nav {
@@ -64,18 +69,18 @@ nav ul {
 nav li a {
     font-size: 1.125rem;
     text-decoration: none;
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     transition: color 0.1s ease-in-out;
 }
 
 nav li a.active {
     text-decoration: none;
-    color: hsl(213, 24%, 44%);
+    color: hsl(213, 35%, 31%);
     transition: color 0.1s ease-in-out;
 }
 
 nav li a:hover {
-    color: hsl(212, 100%, 35%);
+    color: hsl(212, 100%, 25%);
 }
 
 .lang-switcher {
@@ -86,7 +91,7 @@ nav li a:hover {
 }
 
 .lang-switcher a {
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     text-decoration: none;
     transition: color 0.1s ease-in-out;
     font-weight: bold;
@@ -204,7 +209,7 @@ section img {
 
 footer {
     display: flex;
-    background: linear-gradient(120deg, hsl(215, 80%, 75%), hsl(215, 80%, 50%) 100%);
+  background: linear-gradient(90deg, #086CB9, #10325F 325%);
     border-top: 1px solid rgba(0, 0, 0, 0.5);
     padding-top: 1.25rem;
     padding-bottom: .25rem;
@@ -232,7 +237,7 @@ h1,h2,h3,nav ul li a, h2 a,.logo,.ilemale,.ilebig {
     align-items: center;
     align-content: center;
     gap: .125rem;
-    background: linear-gradient(120deg, hsl(215, 80%, 75%), hsl(215, 80%, 50%) 100%);
+   background: linear-gradient(90deg, #086CB9, #10325F 325%);
     padding: 1rem;
     padding-inline: 1.25rem;
     border: 2px solid hsla(0, 0%, 0%, 0.25);
@@ -243,12 +248,12 @@ h1,h2,h3,nav ul li a, h2 a,.logo,.ilemale,.ilebig {
 .ilebig {
     display: flex;
     font-size: clamp(1rem, 3vw, 2rem);
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     font-weight: normal;
 }
 .ilemale {
     font-size: clamp(.75rem, 2.75vw, 1.75rem);
-    color: hsl(212, 100%, 10%);
+    color: hsl(212, 100%, 5%);
     text-shadow: #000000 0px 0px 1px;
     font-weight: bold;
     transition: color 0.1s ease-in-out;
@@ -299,7 +304,7 @@ a .ilemale:hover {
 .mediaikon i
 {
     font-size: 2.5rem;
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     transition: color 0.1s ease-in-out;
 }
 
@@ -350,7 +355,7 @@ h3:hover {
     display: none;
     grid-column: 2;
     font-size: 1.5rem;
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     cursor: pointer;
     user-select: none;
     transition: color 0.1s ease-in-out;
@@ -446,7 +451,7 @@ h3:hover {
 
 .formalne p {
     font-size: 1.25rem;
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     transition: color 0.1s ease-in-out;
 }
 .formalne {
@@ -457,7 +462,7 @@ h3:hover {
 
 footer h3 {
     font-size: 1.25rem;
-    color:hsl(212, 100%, 20%);
+    color:hsl(212, 100%, 5%);
 }
 
 .bolid img {
@@ -497,7 +502,7 @@ footer h3 {
 
 
 .socials a {
-    color: hsl(212, 100%, 20%);
+    color: hsl(212, 100%, 10%);
     transition: color 0.1s ease-in-out;
 }
 
@@ -616,7 +621,7 @@ footer h3 {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         grid-column: 1 / -1;
-        background: linear-gradient(120deg, hsl(215, 80%, 75%), hsl(215, 80%, 50%) 100%);
+       background: linear-gradient(90deg, #086CB9, #10325F 325%);
         border-bottom: rgba(0, 0, 0, 0.5) 1px solid;
         z-index: 999;
     }
