@@ -501,7 +501,8 @@ h3:hover {
     color: hsl(212, 100%, 85%);
     transition: color 0.1s ease-in-out;
 }
-.formalne {
+.formalne a {
+    text-decoration: none;
 }
 .formalne p:hover {
     color: hsl(212, 100%, 65%);
