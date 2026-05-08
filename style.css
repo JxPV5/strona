@@ -636,6 +636,20 @@ display: flex;
 .zespolosoba h2 {
     white-space: nowrap;
 }
+
+.blogmain {
+}
+
+.blogpost {
+    max-width: 100vw;
+}
+
+.asponsor {
+    display: flex;
+    align-items: center;
+}
+
+
 @media only screen and (max-width: 1050px) {
 .zespolosoba {
         flex-direction: column;
