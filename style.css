@@ -503,6 +503,7 @@ h3:hover {
 }
 .formalne a {
     text-decoration: none;
+    text-decoration-line: none;
 }
 .formalne p:hover {
     color: hsl(212, 100%, 65%);
