@@ -64,7 +64,7 @@ background:
         /* Your original blue gradient */
         linear-gradient(60deg, #10325f, #0773c4 100%);
     background-size: 10px 10px, 10px 10px, 100% 100%;
-    
+    overflow: visible;
 }
 
 .logo {
@@ -391,7 +391,7 @@ h3 {
     transition: color 0.1s ease-in-out;
 }
 h3:hover {
-    color: hsl(212, 100%, 25%);
+    color: hsl(212, 100%, 65%);
 }
 
 .nav-toggle {
@@ -405,7 +405,7 @@ h3:hover {
     color: hsl(212, 100%, 95%);
     cursor: pointer;
     user-select: none;
-    transition: color 0.1s ease-in-out;
+    transition: color 0.2s ease, transform 0.3s ease; /* just add this line */
 }
 
 
@@ -456,7 +456,7 @@ h3:hover {
 .icons {
     display: flex;
     gap: 1.75rem;
-    font-size: 2rem;
+    font-size: clamp(2rem, 2.5vw, 1.25rem);
     padding-left: 0rem;
 }
 
@@ -479,17 +479,35 @@ h3:hover {
     margin-top: 1rem;
 }
 
+
+
+
+
+.sponzdjec img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.drugiezdj img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: .25rem;
+}
+
 .sponzdjec, .drugiezdj {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to a new line */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    margin-inline: 1.75rem;
+    align-items: center;
+    gap: 1rem;
 }
-.sponzdjec img, .drugiezdj img {
-    width: 75px; 
-    height: auto; /* Prevents vertical squishing */
-    object-fit: contain; /* Ensures the whole logo is visible */
+
+.sponsorzy {
+    max-width: 900px;
+    width: 100%;
+    align-items: center;
 }
 
 .drugiezdj img {
@@ -497,7 +515,7 @@ h3:hover {
 }
 
 .formalne p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: hsl(212, 100%, 85%);
     transition: color 0.1s ease-in-out;
 }
@@ -510,9 +528,11 @@ h3:hover {
 }
 
 footer h3 {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     color:hsl(212, 100%, 95%);
 }
+
+
 
 .bolid img {
     max-width: 100%;
@@ -544,8 +564,10 @@ footer h3 {
 }
 
 .otherinfo p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1rem);
+    color: rgba(145, 145, 145, 0.625);
 }
 
 
@@ -706,21 +728,34 @@ display: flex;
 
     header {
         padding: 0.6rem 1rem;
+        width: 100%;
     }
 
-    nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        grid-column: 1 / -1;
-       background: linear-gradient(120deg, #10325f, #0773c4 50%);
-        border-bottom: rgba(0, 0, 0, 0.5) 1px solid;
-        z-index: 999;
-    }
+nav {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    right: -1rem;
+    width: calc(100% + 2rem);
+    margin: 0;
+    padding: 0;
+    /* removed width: 100vw and margin-left: calc() */
+    grid-column: 1 / -1;
+    z-index: 999;
+    
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+
+    background: 
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 55%, transparent 55%, transparent 95%, rgba(0,0,0,0.02) 95%, rgba(0,0,0,0.02)),
+        repeating-linear-gradient(-45deg, rgba(0,0,0,0.02) 55%, transparent 55%, transparent 95%, rgba(0,0,0,0.02) 95%, rgba(0,0,0,0.02)),
+        linear-gradient(60deg, #10325f, rgba(7, 114, 196, 0.95) 100%);
+    background-size: 10px 10px, 10px 10px, 100% 100%;
+    border-bottom: rgba(0,0,0,0.5) 1px solid;
+}
 
     nav ul {
         flex-direction: column;
@@ -740,13 +775,18 @@ display: flex;
         background: rgba(0, 0, 0, 0.05);
     }
 
-    .nav-toggle:checked+.hamburger+nav {
-        display: flex;
-    }
+/* AFTER */
+.nav-toggle:checked + .hamburger + nav {
+    max-height: 400px; /* tall enough to fit all your links */
+    opacity: 1;
+    pointer-events: auto;
+}
 
-    .nav-toggle:checked+.hamburger {
-        color: hsl(212, 100%, 35%);
-    }
+.nav-toggle:checked + .hamburger {
+    color: hsl(212, 100%, 75%);
+    transform: rotate(90deg) scale(1.1); /* spin + slight pop */
+}
+
 
 
 
