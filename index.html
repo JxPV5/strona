@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektron Racing</title>
+    <title>Elektron Racing - Strona Główna</title>
+    <meta name="description" content="Jesteśmy zespołem z Liceum Ogólnokształcącego im. Piotra Skargi w Grójcu. Bierzemy udział w projekcie STEM Racing.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,13 +18,13 @@
 <body>
     <div class="grid-perspective"></div>
     <header>
-        <a href="home.html" class="logolink"><img src="/logotylko.svg" alt="Elektron Racing" class="logo" width="45"></a>
+        <a href="index.html" class="logolink"><img src="/logotylko.svg" alt="Elektron Racing" class="logo" width="45"></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="hamburger" aria-label="Menu">&#9776;</label>
         <nav id="nav">
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="index.html" class="active">AKTUALNOŚCI</a></li>
+            <ul>    
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="aktualnosci.html">AKTUALNOŚCI</a></li>
                 <li><a href="zespol.html">ZESPÓŁ</a></li>
                 <li><a href="bolidy.html">BOLIDY</a></li>
             </ul>
@@ -36,26 +37,29 @@
     </header>
 
     <main>
-        <section>
-            <a href="#Post1" class="postlink">
-                <h1>pamietaj ze render bez bolida na tlo z tylu tu</h1>
-                <h2>Omówimy jak działa nasz ręcznie zrobiony system wyścigowy</h2>
-                <div class="post">
-                    <img src="template.jpg">
-                </div>
-                <time datetime="2026-03-28">2026.03.28</time>
-            </a>
+        <section class="logohome">
+            <img src="ElektronLogo3_3.svg" alt="elektron racing logo">
         </section>
-                <section>
-            <a href="post1.html" class="postlink">
-                <h1>Sposób działania</h1>
-                <h2>Opisanie jak robimy i co robimy</h2>
-                <div class="post">
-                    <img src="template.jpg">
-                </div>
-                <time datetime="2026-03-28">2026.03.28</time>
-            </a>
-            </section>
+        <section>
+            <h1 class="sr-only">Elektron Racing - Strona Główna</h1>
+            <h2>Jesteśmy zespołem z <a href="https://logrojec.com.pl/" target="_blank">Liceum Ogólnokształcącego im. Piotra Skargi w Grójcu</a>. Bierzemy udział w projekcie <a href="https://stemracing.pl/" target="_blank">STEM Racing</a> który łączy nauke, technologię i pracę zespołową, by stworzyć najlepszy bolid i markę jakie potrafimy.</h2>
+        </section>
+        <section class="ileboxy">
+            <div class="ilebox">
+                <span class="ilebig">NAJNOWSZY BOLID</span>
+                <a href="bolidy.html"><span class="ilemale">EP4</span></a>
+            </div>
+            <div class="ilebox">
+                <span class="ilebig">CZŁONKOWIE</span>
+                <span class="ilemale">4</span>
+            </div>
+            <div class="ilebox">
+                <span class="ilebig">SPONSORZY</span>
+                <span class="ilemale">3</span>
+            </div>
+        </section>
+        <section>
+        </section>
     </main>
 
     <footer>
