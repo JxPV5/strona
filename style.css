@@ -438,6 +438,10 @@ h3:hover {
     display: none;
 }
 
+.menu-overlay {
+    display: none;
+}
+
 .hamburger {
     display: none;
     grid-column: 2;
@@ -828,6 +832,18 @@ nav {
     max-height: 400px; /* tall enough to fit all your links */
     opacity: 1;
     pointer-events: auto;
+}
+
+.nav-toggle:checked ~ .menu-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    background: transparent;
+    cursor: default;
 }
 
 .nav-toggle:checked + .hamburger {
